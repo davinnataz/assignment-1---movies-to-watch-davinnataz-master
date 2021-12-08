@@ -8,9 +8,27 @@ GitHub URL:https://github.com/davinnataz/assignment-1---movies-to-watch-davinnat
 import csv
 import operator
 
+def read_file():
+    #this function is to transfer data from movies.csv
+    csv_file = open('movies.csv')
+    csv_read = csv.reader(csv_file, delimiter =',')
+    total_data = 0
+    movie_list =[]
+    for row in csv_read:
+        movie = []
+        movie.append(row[0])
+        movie.append(int(row[1]))
+        movie.append(row[2])
+        movie.append(row[3])
+        total_data += 1
+        movie_list.append(movie)
+        return total_data, movie_list
+
+
 def main():
     # this is a main menu for movie to watch
     """..."""
+    total_data, movies_list = read_file()
     print("Movies To Watch 1.0 - by Davin Natanael")
     print(f"{total_data} movies loaded")
     while True:
@@ -29,21 +47,7 @@ def main():
             print("Menu is not found")
 
 
-def read_file():
-    #this function is to transfer data from movies.csv
-    csv_file = open('movies.csv')
-    csv_read = csv.reader(csv_file, delimiter =',')
-    total_data = 0
-    movie_list =[]
-    for row in csv_read:
-        movie = []
-        movie.append(row[0])
-        movie.append(int(row[1]))
-        movie.append(row[2])
-        movie.append(row[3])
-        total_data += 1
-        movie_list.append(movie)
-        return total_data, movie_list
+
 
 
 def print_menu():
