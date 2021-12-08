@@ -111,6 +111,40 @@ def watch_movies(total_data, movies_list):
     return total_data, movies_list
 
 
+def add_movie(total_data, movies_list):
+    title = ""
+    while True:
+        title = input("Title: ")
+        if title == "":
+            print("Input can not be blank")
+        else:
+            break
+
+    year = 0
+    while True:
+        try:
+            year = int(input("Year: "))
+        except ValueError:
+            print("Invalid Input; Enter a valid number")
+            continue
+        if (year < 0):
+            print("Number must be >= 0")
+        else:
+            break
+
+    category = ""
+    while True:
+        category = input("Category: ")
+        if category == "":
+            print("Input can not be blank")
+        else:
+            break
+
+    movies_list.append([title, year, category, 'u'])
+    total_data += 1
+    print(f"{title} ({category} from {year}) added to movie list")
+    return total_data, movies_list
+
 
 
 
