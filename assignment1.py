@@ -55,6 +55,7 @@ def print_menu():
     print("W - Watch a movie")
     print("Q - Quit")
 
+
 def Listed_movies (total_data,movies_list):
     #this function is to show the list of movie and give knowledge if this movie is watched or not
     i = 0
