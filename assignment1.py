@@ -30,6 +30,19 @@ def main():
 
 def read_file():
     #this function is to transfer data from movies.csv
+    csv_file = open('movies.csv')
+    csv_read = csv.reader(csv_file, delimiter =',')
+    total_data = 0
+    movie_list =[]
+    for row in csv_read:
+        movie = []
+        movie.append(row[0])
+        movie.append(int(row[1]))
+        movie.append(row[2])
+        movie.append(row[3])
+        total_data += 1
+        movie_list.append(movie)
+        return total_data, movie_list
 
 if __name__ == '__main__':
     main()
