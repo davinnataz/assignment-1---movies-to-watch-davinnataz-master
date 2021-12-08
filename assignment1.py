@@ -33,7 +33,7 @@ def main():
     print(f"{total_data} movies loaded")
     while True:
         print_menu()
-        menu = imput(">>>").upper
+        menu = input(">>>").upper
         if menu == 'L':
             total_data, movie_list = movies_list(total_data, movie_list)
         elif menu == 'A':
