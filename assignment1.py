@@ -2,7 +2,7 @@
 Replace the contents of this module docstring with your own details
 Name: Davin Natanael
 Date started: 08 December 2021
-GitHub URL: 
+GitHub URL:
 """
 
 
