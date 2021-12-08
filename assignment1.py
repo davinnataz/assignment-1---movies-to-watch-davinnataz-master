@@ -14,7 +14,7 @@ def main():
     print("Movies To Watch 1.0 - by Davin Natanael")
     print(f"{total_data} movies loaded")
     while True:
-        print_menu():
+        print_menu()
         menu = imput(">>>").upper
         if menu == 'L':
             total_data, movie_list = movies_list(total_data, movie_list)
