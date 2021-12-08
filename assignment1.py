@@ -28,6 +28,7 @@ def main():
         else:
             print("Menu is not found")
 
+
 def read_file():
     #this function is to transfer data from movies.csv
     csv_file = open('movies.csv')
@@ -43,6 +44,8 @@ def read_file():
         total_data += 1
         movie_list.append(movie)
         return total_data, movie_list
+
+
 def print_menu():
     #to show a menu
     print("Menu : ")
@@ -51,6 +54,13 @@ def print_menu():
     print("W - Watch a movie")
     print("Q - Quit")
 
+
+def movies_list(total_data, movie_list):
+    #to show a list movie and knowledge if it is watched or not
+    i = 0
+    u = 0
+    w = 0
+    movie_list.sort(key=operator.itemgetter(1))
 
 
 if __name__ == '__main__':
