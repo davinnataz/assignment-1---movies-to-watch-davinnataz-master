@@ -44,6 +44,7 @@ def read_file():
         movie_list.append(movie)
         return total_data, movie_list
 def print_menu():
+    #to show a menu
     print("Menu : ")
     print("L - List movie")
     print("A - Add new movie")
