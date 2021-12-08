@@ -146,7 +146,13 @@ def add_movie(total_data, movies_list):
     print(f"{title} ({category} from {year}) added to movie list")
     return total_data, movies_list
 
-
+def quit_movies(total_data, movies_list):
+    #this function to tell users to quit from program
+    write_csv = open('movies.csv', 'w', newline='')
+    writer = csv.writer(write_csv)
+    writer.writerows(movies_list)
+    print(f"{total_data} movies saved to movies.csv")
+    print("Have a nice day :)")
 
 
 if __name__ == '__main__':
