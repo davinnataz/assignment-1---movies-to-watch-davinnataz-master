@@ -17,13 +17,14 @@ def main():
         print_menu():
         menu = imput(">>>").upper
         if menu == 'L':
-
+            total_data, movie_list = movies_list(total_data, movie_list)
         elif menu == 'A':
-
+            total_data, movie_list = adding_movie(total_data, movie_list)
         elif menu == 'W':
-
+            total_data, movie_list = watching_movie(total_data, movie_list)
         elif menu == 'Q':
-
+            quit_menu(total_data, movie_list)
+            break
         else:
             print("Menu is not found")
 
