@@ -1,7 +1,7 @@
 # CP1404 Assignment 1 - Movies To Watch
 Assignment 1 for CP1404/CP1804/CP5632, IT@JCU
 
-By: _Your Name_
+By: _Davin Natanael_
 
 This repo contains starter files including a Python file and two CSV files.  
 `movies.csv` is a data file for you to use.  
@@ -15,8 +15,8 @@ See https://trello.com/c/6H24THnj/21-wakatime-time-tracking-for-ides-join-our-le
 
 
 1. How long did the entire project (assignment 1) take you?
-> answer...
+> It takes me around 3 hours and 47 minutes to finish this assignment 1 in one day works
 
 
 2. What do you plan to do  differently in your development process for assignment 2?
-> answer...
+> Maybe, i will do it faster that i did it right now... So i can focus and not hurry like this
