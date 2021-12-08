@@ -8,8 +8,9 @@ GitHub URL:https://github.com/davinnataz/assignment-1---movies-to-watch-davinnat
 import csv
 import operator
 
+
 def read_file():
-    #this function to open a movies.csv files for adding a movie there
+    # this function to open a movies.csv files for adding a movie there
     csv_file = open('movies.csv')
     csv_read = csv.reader(csv_file, delimiter=',')
     total_data = 0
@@ -24,8 +25,9 @@ def read_file():
         movies_list.append(movie)
     return total_data, movies_list
 
+
 def main():
-    #this is a main function from this program
+    # this is a main function from this program
     """..."""
     total_data, movies_list = read_file()
 
@@ -36,19 +38,19 @@ def main():
         print_menu()
         menu = input(">>> ").upper()
         if (menu == 'L'):
-            total_data, movies_list = Listed_movies(total_data,movies_list)
+            total_data, movies_list = Listed_movies(total_data, movies_list)
         elif (menu == 'A'):
-            total_data, movies_list = add_movie(total_data,movies_list)
+            total_data, movies_list = add_movie(total_data, movies_list)
         elif (menu == 'W'):
-            total_data, movies_list = watch_movies(total_data,movies_list)
+            total_data, movies_list = watch_movies(total_data, movies_list)
         elif (menu == "Q"):
             quit_movies(total_data, movies_list)
             break
-        else:   
+        else:
             print("Menu not found")
 
 
-def print_menu():  
+def print_menu():
     print("Menu:")
     print("L - List movies")
     print("A - Add new movie")
@@ -56,8 +58,8 @@ def print_menu():
     print("Q - Quit")
 
 
-def Listed_movies (total_data,movies_list):
-    #this function is to show the list of movie and give knowledge if this movie is watched or not
+def Listed_movies(total_data, movies_list):
+    # this function is to show the list of movie and give knowledge if this movie is watched or not
     i = 0
     u = 0
     w = 0
@@ -75,7 +77,7 @@ def Listed_movies (total_data,movies_list):
 
 
 def watch_movies(total_data, movies_list):
-    #this function is to watch a movie
+    # this function is to watch a movie
     j = 0
     for row in movies_list:
         if (row[3] == 'w'):
@@ -112,7 +114,7 @@ def watch_movies(total_data, movies_list):
 
 
 def add_movie(total_data, movies_list):
-    #this function is to add some movie if the movie list is all watched
+    # this function is to add some movie if the movie list is all watched
     title = ""
     while True:
         title = input("Title: ")
@@ -146,8 +148,9 @@ def add_movie(total_data, movies_list):
     print(f"{title} ({category} from {year}) added to movie list")
     return total_data, movies_list
 
+
 def quit_movies(total_data, movies_list):
-    #this function to tell users to quit from program
+    # this function to tell users to quit from program
     write_csv = open('movies.csv', 'w', newline='')
     writer = csv.writer(write_csv)
     writer.writerows(movies_list)
@@ -157,4 +160,3 @@ def quit_movies(total_data, movies_list):
 
 if __name__ == '__main__':
     main()
-
