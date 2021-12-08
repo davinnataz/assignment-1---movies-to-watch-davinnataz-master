@@ -61,6 +61,16 @@ def movies_list(total_data, movie_list):
     u = 0
     w = 0
     movie_list.sort(key=operator.itemgetter(1))
+    for row in movie_list:
+        i += 1
+        if row[3] == "u":
+            u += 1
+            print(f"{i}. * {row[0]} - {row[1]} ({row[2]})")
+        else:
+            w += 1
+            print(f"{i}. * {row[0]} - {row[1]} ({row[2]})")
+    print(f"{w} movie watched, {u} movies still to watch")
+    return total_data, movie_list
 
 
 if __name__ == '__main__':
