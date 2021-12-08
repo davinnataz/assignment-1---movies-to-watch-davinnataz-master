@@ -28,6 +28,8 @@ def main():
         else:
             print("Menu is not found")
 
+def read_file():
+    #this function is to transfer data from movies.csv
 
 if __name__ == '__main__':
     main()
