@@ -43,6 +43,14 @@ def read_file():
         total_data += 1
         movie_list.append(movie)
         return total_data, movie_list
+def print_menu():
+    print("Menu : ")
+    print("L - List movie")
+    print("A - Add new movie")
+    print("W - Watch a movie")
+    print("Q - Quit")
+
+
 
 if __name__ == '__main__':
     main()
