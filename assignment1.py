@@ -146,7 +146,7 @@ def add_movie(total_data, movies_list):
     print(f"{title} ({category} from {year}) added to movie list")
     return total_data, movies_list
 
-ww
+
 
 
 if __name__ == '__main__':
