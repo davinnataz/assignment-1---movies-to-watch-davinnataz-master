@@ -112,6 +112,7 @@ def watch_movies(total_data, movies_list):
 
 
 def add_movie(total_data, movies_list):
+    #this function is to add some movie if the movie list is all watched
     title = ""
     while True:
         title = input("Title: ")
